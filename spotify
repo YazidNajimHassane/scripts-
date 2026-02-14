@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e 
-SPOTX_SCRIPT="/home/yazid/Downloads/spotx.sh"
+SPOTX_SCRIPT="~/Downloads/spotx.sh"
 
 [ -f "$SPOTX_SCRIPT" ] || exit 1
 
@@ -8,7 +8,7 @@ SPOTX_SCRIPT="/home/yazid/Downloads/spotx.sh"
 if ! flatpak list | grep -q "com.spotify.Client"; then
     echo "Spotify not found. Installing Spotify..."
     flatpak install -y flathub com.spotify.Client
-    cd "/home/yazid/Downloads" && bash spotx.sh
+    cd "~/Downloads" && bash spotx.sh
 else
     echo "Spotify is already installed. Proceeding..."
     flatpak uninstall -y com.spotify.Client
