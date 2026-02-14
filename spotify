@@ -4,7 +4,7 @@ SPOTX_SCRIPT="~/Downloads/spotx.sh"
 
 [ -f "$SPOTX_SCRIPT" ] || exit 1
 
-# Uninstall Spotify
+# Uninstall Spotify and after install 
 if ! flatpak list | grep -q "com.spotify.Client"; then
     echo "Spotify not found. Installing Spotify..."
     flatpak install -y flathub com.spotify.Client
